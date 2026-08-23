@@ -1,23 +1,23 @@
 # Antonio Fallea — Portfolio World
 
-Portfolio interattivo in Three.js, progettato come una città 3D esplorabile.
+An interactive Three.js portfolio designed as an explorable 3D city.
 
 ## Comandi
 
-- `WASD` o frecce: muovi Antonio
-- `E`: apri il progetto vicino
-- Clic su un beacon: imposta il percorso
-- Drag: ruota la camera
+- `WASD` or arrow keys: move Antonio
+- `E`: explore a nearby location
+- Click a beacon: set a route
+- Drag: rotate the camera
 - Scroll: zoom
 
-## Sviluppo
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Per la build di produzione:
+For a production build:
 
 ```bash
 npm run build

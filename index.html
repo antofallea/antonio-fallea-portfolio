@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mondo interattivo di Antonio Fallea — studente di informatica e developer." />
+    <meta name="description" content="Antonio Fallea's interactive portfolio world — computer science student and developer." />
     <title>Antonio Fallea — World</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,13 +11,13 @@
   </head>
   <body>
     <main id="app">
-      <canvas id="world" aria-label="Mondo 3D esplorabile del portfolio di Antonio Fallea"></canvas>
+      <canvas id="world" aria-label="Antonio Fallea's explorable 3D portfolio world"></canvas>
       <header class="hud top-hud">
-        <a class="wordmark" href="#" aria-label="Ritorna alla base">AF<span>_</span></a>
+        <a class="wordmark" href="#" aria-label="Return to base">AF<span>_</span></a>
         <div class="zone-readout"><span class="tiny">LOCATION</span><strong id="zoneName">BASE CAMP</strong></div>
         <div class="top-actions"><button class="info-button" id="openInfo">INFO</button><button class="audio-button" id="audioToggle" aria-pressed="false"><i></i> SOUND <span>OFF</span></button><a class="github-link" href="https://github.com/antofallea" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a></div>
       </header>
-      <aside class="hud side-hud" aria-label="Stato della mappa">
+      <aside class="hud side-hud" aria-label="Map status">
         <div class="mission"><span class="tiny">CURRENT MISSION</span><strong id="missionText">Explore the map</strong></div>
         <div class="map-card">
           <div class="minimap"><span class="mini-road r1"></span><span class="mini-road r2"></span><i class="mini-base"></i><i class="mini-chrono"></i><i class="mini-ris"></i><i class="mini-info" title="Info House"></i><b id="miniPlayer"></b></div>
@@ -26,23 +26,23 @@
       </aside>
       <div class="hud controls-hud"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE</span><span><kbd>E</kbd> EXPLORE</span><span>DRAG CAMERA</span><span>CLICK A BEACON</span></div>
       <div class="interaction-prompt" id="interactionPrompt"><span class="prompt-key">E</span><span>EXPLORE <b id="nearbyName"></b></span></div>
-      <div class="touch-controls" aria-label="Controlli touch"><div class="move-pad"><button data-dir="up">▲</button><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div><button class="explore-touch" id="exploreTouch">E</button></div>
+      <div class="touch-controls" aria-label="Touch controls"><div class="move-pad"><button data-dir="up">▲</button><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div><button class="explore-touch" id="exploreTouch">E</button></div>
       <section class="intro-screen" id="introScreen" aria-hidden="true">
         <div class="intro-noise"></div>
         <p class="eyebrow">ANTONIO FALLEA / PORTFOLIO WORLD</p>
         <h1>Enter the<br /><em>world.</em></h1>
-        <p>Una città virtuale da esplorare.<br />Ogni edificio custodisce un progetto.</p>
+        <p>An explorable virtual city.<br />Every building holds a project.</p>
         <button id="enterWorld">ENTER <span>↗</span></button>
-        <small>WASD / FRECCE PER MUOVERTI</small>
+        <small>WASD / ARROW KEYS TO MOVE</small>
       </section>
       <dialog class="project-dialog" id="projectDialog">
-        <button class="close-dialog" aria-label="Chiudi progetto">×</button>
+        <button class="close-dialog" aria-label="Close project">×</button>
         <div class="dialog-index" id="dialogIndex">01</div><p class="eyebrow" id="dialogType"></p><h2 id="dialogTitle"></h2><p class="dialog-description" id="dialogDescription"></p><div class="dialog-tags" id="dialogTags"></div><a id="dialogLink" class="repo-button" target="_blank" rel="noreferrer">VIEW REPOSITORY <span>↗</span></a>
       </dialog>
       <dialog class="info-dialog" id="infoDialog">
-        <button class="close-info" aria-label="Chiudi informazioni">×</button>
+        <button class="close-info" aria-label="Close information">×</button>
         <p class="eyebrow">PLAYER PROFILE / 2005</p><h2>Antonio<br /><em>Fallea</em></h2>
-        <p>Studente universitario di informatica. Mi piacciono i sistemi che uniscono strutture dati, ricerca e interfacce con un’anima.</p>
+        <p>Computer science student. I enjoy systems that bring together data structures, research, and interfaces with a personality.</p>
         <div class="info-stats"><span>ROLE <b>COMPUTER SCIENCE STUDENT</b></span><span>BASE <b>ITALY</b></span><span>STACK <b>PYTHON · JS · C · VERILOG</b></span></div>
         <a class="repo-button" href="https://github.com/antofallea" target="_blank" rel="noreferrer">OPEN GITHUB <span>↗</span></a>
       </dialog>
