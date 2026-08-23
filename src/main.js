@@ -51,7 +51,7 @@ road(78,8,0,0);road(8,78,0,0);road(5.7,34,24,-17);road(34,5.7,-17,24);
 const plaza=create(new THREE.CylinderGeometry(8.4,8.4,.09,64),material.pavement,0,.05,0);const plazaRing=create(new THREE.RingGeometry(5.55,5.76,64),new THREE.MeshBasicMaterial({color:'#a8c7c8',side:THREE.DoubleSide}),0,.101,0);plazaRing.rotation.x=-Math.PI/2;
 const base=new THREE.Group();create(new THREE.CylinderGeometry(2.85,3.15,1.55,8),material.navy,0,.78,0,base);create(new THREE.ConeGeometry(3.42,2.05,8),material.orange,0,2.55,0,base);const bLabel=label('BASE CAMP');bLabel.position.y=5.65;base.add(bLabel);world.add(base);
 infoHouse();
-projectHub(projects.chrono,'chrono');projectHub(projects.ris,'ris');landmark(projects.chrono,projects.chrono.color);landmark(projects.ris,projects.ris.color);
+projectHub(projects.chrono,'chrono');projectHub(projects.ris,'ris');hubs.forEach(hub=>hub.children.filter(child=>child.isSprite).forEach(child=>child.visible=false));landmark(projects.chrono,projects.chrono.color);landmark(projects.ris,projects.ris.color);
 [[-28,-18,5.5,7,5.3,0],[-29,-5,4.5,9,3.6,1],[-18,-29,7,4.6,6.5,2],[16,21,5.2,8,5.1,0],[28,9,5.6,5.5,7.3,1],[27,-25,6.5,5,4.6,2],[-11,28,8,4.4,5,1],[10,-29,7,4.4,4.8,2],[29,-7,4.3,6,6.1,0]].forEach(a=>building(...a));
 for(let x=-35;x<=35;x+=5){tree(x,-36,.82);tree(x,35,.85)}for(let z=-30;z<=30;z+=5){tree(-36,z,.76);tree(36,z,.86)}[[-12,11],[11,10],[-10,-12],[11,-10],[-24,19],[22,27],[-26,-27],[26,-4],[-4,24],[20,-6]].forEach(p=>tree(...p,1.2));[-29,-21,-13,13,21,29].forEach(n=>{lamp(n,-4.1);lamp(n,4.1);lamp(-4.1,n);lamp(4.1,n)});bench(-9,9,.4);bench(9,-9,-2.7);bench(-7,-9,1.2);bench(8,9,2.2);car(-24,-1.5,'#de6445',1,true);car(17,1.5,'#d9d5bd',0,true);car(1.5,-19,'#246b8b');car(-1.5,23,'#3b544a',0);particleField();
 
