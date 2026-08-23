@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import soldierAsset from './assets/soldier.glb?url';
 import asphaltColor from './assets/pbr/asphalt-color.jpg';
@@ -23,7 +24,7 @@ scene.background=new THREE.Color('#050d1b'); scene.fog=new THREE.FogExp2('#07132
 const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,180);
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.08; renderer.outputColorSpace=THREE.SRGBColorSpace;
-const composer=new EffectComposer(renderer); composer.addPass(new RenderPass(scene,camera)); composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.08,.25,.99));
+const composer=new EffectComposer(renderer),ssao=new SSAOPass(scene,camera,innerWidth,innerHeight);ssao.kernelRadius=8;ssao.minDistance=.002;ssao.maxDistance=.11;composer.addPass(new RenderPass(scene,camera));composer.addPass(ssao);composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.08,.25,.99));
 const world=new THREE.Group(); scene.add(world);
 const colliders=[], hubs=[], clickables=[], cars=[], particles=[], techEffects=[], skyTraffic=[];
 const material={
