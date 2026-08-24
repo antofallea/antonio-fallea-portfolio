@@ -14,7 +14,7 @@ import './style.css';
 
 const projects = {
   chrono: { id:'chrono', index:'01', type:'PYTHON · AI RETRIEVAL', title:'ChronoWeave', short:'CHRONO WEAVE', description:'A pluggable vector index for AI retrieval. Beyond semantic similarity, it accounts for temporal freshness, evidence provenance, and corroboration strength.', tags:['Python','Vector index','RAG','Evidence-aware'], link:'https://github.com/antofallea/ChronoWeave', position:new THREE.Vector3(14,0,-10), color:0xff2bbd },
-  ris: { id:'ris', index:'02', type:'PYTHON · GRAPH DATA', title:'Relational Identity Structure', short:'R.I.S. LAB', description:'A prototype for representing entity identity through relational signatures, bringing together typed graphs, record linkage, and a reproducible benchmark.', tags:['Python','Entity resolution','Graphs','Research'], link:'https://github.com/antofallea/relational-identity-structure', position:new THREE.Vector3(-14,0,11), color:0x1cecff },
+  ris: { id:'ris', index:'02', type:'PYTHON · GRAPH DATA', title:'Relational Identity Structure', short:'R.I.S. LAB', description:'An entity-resolution research project built on the idea that identity can be discovered through the relationships that surround an entity.', tags:['Python','Entity resolution','Graphs','Research'], link:'https://github.com/antofallea/relational-identity-structure', position:new THREE.Vector3(-14,0,11), color:0x1cecff },
 };
 const infoPlace = { id: 'info', short: 'INFO HOUSE', position: new THREE.Vector3(-10, 0, -11) };
 
